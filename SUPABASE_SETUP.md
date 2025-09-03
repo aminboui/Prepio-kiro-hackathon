@@ -1,6 +1,6 @@
-# Supabase Setup Guide for FixorAI
+# Supabase Setup Guide for Prepio
 
-This guide will help you set up optional progress tracking for FixorAI using Supabase.
+This guide will help you set up optional progress tracking for Prepio using Supabase.
 
 ## 🚀 Quick Setup
 
@@ -10,7 +10,7 @@ This guide will help you set up optional progress tracking for FixorAI using Sup
 2. Click "New Project"
 3. Choose your organization
 4. Enter project details:
-   - **Name**: `fixorai` (or any name you prefer)
+   - **Name**: `prepio` (or any name you prefer)
    - **Database Password**: Generate a secure password
    - **Region**: Choose the closest region to your users
 5. Click "Create new project"
@@ -76,7 +76,7 @@ Once set up, users will see:
 
 ## 🧪 Testing the Setup
 
-1. Start your FixorAI application
+1. Start your Prepio application
 2. Complete a coding challenge
 3. Click the "Progress" button in the challenge interface
 4. You should see your statistics and challenge history
