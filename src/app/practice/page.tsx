@@ -1,16 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import LandingPage from '@/components/LandingPage';
+import { useRouter } from 'next/navigation';
 import ChallengeSetup from '@/components/ChallengeSetup';
 import ChallengeInterface from '@/components/ChallengeInterface';
 import { generateChallenge, evaluateSolution, Challenge, ChallengeRequest, FeedbackResponse } from '@/lib/ai';
 import { getOrCreateUserProfile, saveChallengeAttempt, getCurrentUser } from '@/lib/supabase';
+import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
-type AppState = 'landing' | 'setup' | 'challenge';
+type PracticeState = 'setup' | 'challenge';
 
-export default function Home() {
-  const [appState, setAppState] = useState<AppState>('landing');
+export default function PracticePage() {
+  const router = useRouter();
+  const [practiceState, setPracticeState] = useState<PracticeState>('setup');
   const [currentChallenge, setCurrentChallenge] = useState<Challenge | null>(null);
   const [currentPreferences, setCurrentPreferences] = useState<ChallengeRequest | null>(null);
   const [feedback, setFeedback] = useState<FeedbackResponse | null>(null);
@@ -19,11 +22,6 @@ export default function Home() {
   const [isGeneratingNew, setIsGeneratingNew] = useState(false);
   const [challengeStartTime, setChallengeStartTime] = useState<number>(0);
   const [savedChallengeId, setSavedChallengeId] = useState<string | null>(null);
-
-  const handleGetStarted = () => {
-    // Navigate to mode selection page
-    window.location.href = '/mode-selection';
-  };
 
   const handleStartChallenge = async (request: ChallengeRequest) => {
     setIsLoading(true);
@@ -42,7 +40,7 @@ export default function Home() {
       }
 
       setCurrentChallenge(challenge);
-      setAppState('challenge');
+      setPracticeState('challenge');
 
       // Save challenge attempt to database (optional)
       try {
@@ -161,7 +159,7 @@ print(is_prime(17))  # Should return True`,
         skillLevel: request.skillLevel,
         challengeType: request.challengeType,
       });
-      setAppState('challenge');
+      setPracticeState('challenge');
     } finally {
       setIsLoading(false);
     }
@@ -219,16 +217,13 @@ print(is_prime(17))  # Should return True`,
   };
 
   const handleBack = () => {
-    setCurrentChallenge(null);
-    setFeedback(null);
-    setAppState('setup');
-  };
-
-  const handleBackToLanding = () => {
-    setAppState('landing');
-    setCurrentChallenge(null);
-    setCurrentPreferences(null);
-    setFeedback(null);
+    if (practiceState === 'challenge') {
+      setCurrentChallenge(null);
+      setFeedback(null);
+      setPracticeState('setup');
+    } else {
+      router.push('/mode-selection');
+    }
   };
 
   const handleNewChallenge = async () => {
@@ -353,19 +348,17 @@ print(is_prime(17))  # Should return True`,
 
   return (
     <main className="min-h-screen bg-background">
-      {appState === 'landing' && (
-        <LandingPage onGetStarted={handleGetStarted} />
-      )}
+      
 
-      {appState === 'setup' && (
+      {practiceState === 'setup' && (
         <ChallengeSetup
           onStartChallenge={handleStartChallenge}
           isLoading={isLoading}
-          onBack={handleBackToLanding}
+          onBack={handleBack}
         />
       )}
 
-      {appState === 'challenge' && currentChallenge && (
+      {practiceState === 'challenge' && currentChallenge && (
         <ChallengeInterface
           challenge={currentChallenge}
           onBack={handleBack}

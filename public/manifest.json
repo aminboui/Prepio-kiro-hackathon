@@ -1,0 +1,17 @@
+{
+  "name": "Prepio - AI-Powered Coding Challenges",
+  "short_name": "Prepio",
+  "description": "Personalized coding challenges with AI-powered feedback to improve your development skills",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

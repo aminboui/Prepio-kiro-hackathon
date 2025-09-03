@@ -1,27 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  :root {
+    --background: 210 11% 7%;
+    --foreground: 0 0% 100%;
+    --card: 210 11% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 11% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 22 83% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 6% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 6% 18%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 210 6% 23%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 6% 18%;
+    --input: 210 6% 18%;
+    --ring: 22 83% 48%;
+    --chart-1: 20 90% 40%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}/* 
+Monaco Editor specific styles */
+.monaco-editor {
+  background-color: hsl(var(--card)) !important;
+}
+
+.monaco-editor .margin {
+  background-color: hsl(var(--card)) !important;
+}
+
+.monaco-editor .monaco-editor-background {
+  background-color: hsl(var(--card)) !important;
+}
+
+/* Ensure full height for editor containers */
+.monaco-editor-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Dark theme scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2e323d #1a202c;
+}
+
+/* Webkit scrollbars (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #1d2128;
+  border-radius: 4px;
+  border: 1px solid #13171e;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #15171c;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #13171e;
+}
+
+/* Specific styling for code blocks */
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #15191e;
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #171a1f;
 }
