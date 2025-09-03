@@ -145,4 +145,4 @@ You can extend the schema to add:
 
 ---
 
-**Note**: Progress tracking is completely optional. FixorAI works perfectly without Supabase - users just won't see the progress tracking features.
+**Note**: Progress tracking is completely optional. Prepio works perfectly without Supabase - users just won't see the progress tracking features.
