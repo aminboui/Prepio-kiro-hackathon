@@ -1,4 +1,4 @@
-# FixorAI - Complete AI-Powered Coding Education Platform
+# Prepio - Complete AI-Powered Coding Education Platform
 
 **🏆 Hackathon Submission - Educational Apps Category**
 
@@ -6,7 +6,7 @@ A comprehensive AI-powered coding education platform that combines personalized 
 
 ## 🎯 Hackathon Category: Educational Apps
 
-FixorAI is an AI-enhanced learning platform that helps developers master coding skills and ace technical interviews through personalized challenges, 4-stage interview simulations, and intelligent feedback systems.
+Prepio is an AI-enhanced learning platform that helps developers master coding skills and ace technical interviews through personalized challenges, 4-stage interview simulations, and intelligent feedback systems.
 
 ## 🚀 Complete Feature Set
 
@@ -43,7 +43,7 @@ FixorAI is an AI-enhanced learning platform that helps developers master coding 
 - **Protected Routes**: Secure user experience with smart redirects
 
 ### **💻 Core Platform Features**
-- **AI Challenge Generation**: Powered by Google Gemini 1.5 Flash
+- **AI Challenge Generation**: Powered by Google Gemini 2.5 Flash
 - **Monaco Editor Integration**: VS Code-like professional coding experience
 - **Multi-dimensional AI Evaluation**: Correctness, efficiency, code quality scoring
 - **10+ Programming Languages**: JavaScript, TypeScript, Python, Java, C++, C#, Go, Rust, PHP, Ruby
@@ -52,7 +52,7 @@ FixorAI is an AI-enhanced learning platform that helps developers master coding 
 
 ### **🎨 Professional UI/UX Design**
 - **Dark Theme First**: Developer-optimized interface (#121212 background)
-- **Electric Blue Design**: Consistent #3b82f6 primary color throughout
+- **Electric Orange Design**: Consistent #ea580c primary color throughout
 - **Glass Morphism Effects**: Modern card designs with backdrop blur
 - **Responsive Design**: Perfect experience on all devices and screen sizes
 - **Smooth Animations**: Professional hover effects and loading states
@@ -83,7 +83,7 @@ This project was built entirely using Kiro IDE, demonstrating the incredible pow
 - Extended to 10+ programming languages with proper syntax highlighting
 - Added skill level adaptation (Beginner, Intermediate, Advanced)
 - Implemented comprehensive AI evaluation system
-- Enhanced UI/UX with dark theme and electric blue design
+- Enhanced UI/UX with dark theme and electric orange design
 
 **Phase 3: Gamification & User Engagement**
 - Designed and implemented 8-level progression system
@@ -114,7 +114,7 @@ This project was built entirely using Kiro IDE, demonstrating the incredible pow
 #### **1. Steering Rules** (`.kiro/steering/project-guidelines.md`)
 ```markdown
 Comprehensive guidelines that ensured consistency:
-- Design system (dark theme, electric blue, typography)
+- Design system (dark theme, electric orange, typography)
 - Technical architecture (Next.js, TypeScript, Supabase)
 - AI integration patterns and security practices
 - Component structure and naming conventions
@@ -211,7 +211,7 @@ The specification-driven approach was transformational:
 
 ### 🏆 **Why This Showcases Kiro's Power**
 
-**FixorAI demonstrates that Kiro IDE can:**
+**Prepio AI demonstrates that Kiro IDE can:**
 - Build production-ready SaaS applications from scratch
 - Generate complex, interconnected features that work together seamlessly
 - Maintain consistent architecture and code quality throughout development
@@ -257,7 +257,7 @@ src/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd fixorai
+   cd prepio
    ```
 
 2. **Install dependencies**
@@ -281,14 +281,14 @@ src/
 ## 🎨 Design System
 
 - **Theme**: Dark mode first (#121212 background)
-- **Primary Color**: Electric Blue (#3b82f6)
+- **Primary Color**: Electric orange (#ea580c)
 - **Typography**: Inter for UI, JetBrains Mono for code
 - **Components**: Consistent Shadcn/UI components
 - **Icons**: Lucide React icons with Zap as primary brand icon
 
 ## 📊 Progress Tracking (Optional)
 
-FixorAI includes optional progress tracking powered by Supabase:
+Prepio includes optional progress tracking powered by Supabase:
 
 - **Simple Authentication**: Quick email/password signup (no personal info required)
 - **Challenge History**: Complete record of all attempted challenges
